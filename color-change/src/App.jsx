@@ -4,6 +4,7 @@ import ColorButton from "./colorButton";
 function App() {
   const initialColor = "gray";
   const [color, setColor] = useState(initialColor);
+  const [inputColor, setInputColor] = useState("");
 
   const colors = [
     { label: "赤", color: "red" },
@@ -22,6 +23,13 @@ function App() {
       }}
     >
       <h1>色変更アプリ</h1>
+      <input
+        type="text"
+        value={inputColor}
+        onChange={(e) => setInputColor(e.target.value)}
+        placeholder="例: red, blue, green"
+      />
+      <button onClick={() => setColor(inputColor)}>入力した色に変更する</button>
       <p>現在の色：{color}</p>
       {colors.map((c) => (
         <ColorButton
