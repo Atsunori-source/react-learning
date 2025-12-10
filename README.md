@@ -25,3 +25,16 @@
 ### 🚀 次やること
 - ランダム色変更ボタン
 - input で自由に色変更
+
+## 📅 Day 3：自由入力で色変更（Controlled Component）
+
+### 🔍 学んだこと
+- setState（setColor / setInputColor）が呼ばれると React は再レンダリングする
+- UI は state の「現在の値」だけで描画されるという React の基本思想
+- input の値を state で管理する Controlled Component の仕組み
+- onChange で state を更新し、UI を同期させる動きの理解
+
+### 📝 実装したもの
+- input に色名を入力して背景色を変更できる機能
+- 入力値を state（inputColor）で管理
+- 変更ボタンを押すと背景色を動的に反映
